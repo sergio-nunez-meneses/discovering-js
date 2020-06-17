@@ -1,0 +1,24 @@
+// out: style.css, sourcemap: true, compress: true;
+// main: style.less;
+
+@import "variables.less";
+
+html {
+  height: 100%;
+}
+body {
+  max-height: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: lighten(@canvas-color, 20%);
+}
+.canvas {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  .rect(@canvas-width, @canvas-height, darken(@canvas-color, 10%));
+}
+.pin {
+  .rect(@pin-width, @pin-height, saturate(@canvas-color, 40%));
+  position: relative;
+}
